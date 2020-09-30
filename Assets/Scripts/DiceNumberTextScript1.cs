@@ -18,12 +18,10 @@ public class DiceNumberTextScript1 : MonoBehaviour {
 	void Update () {
 			if (text.name == "Text")
 		{
-			//für die erste Text Box
 			text.text = diceNumber1.ToString();
 		}
 		if (text.name == "Text2")
 		{
-			//zum löschen
 			text.text = diceNumber2.ToString();
 		}
 	}
