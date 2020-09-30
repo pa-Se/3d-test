@@ -22,6 +22,7 @@ public class DiceNumberTextScript1 : MonoBehaviour {
 		}
 		if (text.name == "Text2")
 		{
+			//zum löschen
 			text.text = diceNumber2.ToString();
 		}
 	}
