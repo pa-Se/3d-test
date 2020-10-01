@@ -11,6 +11,10 @@ public class DiceNumberTextScript1 : MonoBehaviour {
 
 	public static int diceNumber3;
 
+	public static int diceNumber4;
+
+	public static int diceNumber5;
+
 	// Use this for initialization
 	void Start () {
 		text = GetComponent<Text> ();
@@ -23,7 +27,7 @@ public class DiceNumberTextScript1 : MonoBehaviour {
 		{
 			text.text = diceNumber1.ToString();
 		}
-		
+
 		if (text.name == "Text2")
 		{
 			text.text = diceNumber2.ToString();
@@ -32,6 +36,16 @@ public class DiceNumberTextScript1 : MonoBehaviour {
 		if (text.name == "Text3")
 		{
 			text.text = diceNumber3.ToString();
+		}
+
+		if (text.name == "Text4")
+		{
+			text.text = diceNumber4.ToString();
+		}
+
+		if (text.name == "Text5")
+		{
+			text.text = diceNumber5.ToString();
 		}
 	}
 }

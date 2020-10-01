@@ -22,6 +22,8 @@ public class DiceScript1 : MonoBehaviour {
 		DiceNumberTextScript1.diceNumber1 = 0;
 		DiceNumberTextScript1.diceNumber2 = 0;
 		DiceNumberTextScript1.diceNumber3 = 0;
+		DiceNumberTextScript1.diceNumber4 = 0;
+		DiceNumberTextScript1.diceNumber5 = 0;
 		float dirX = Random.Range (0, 500);
 		float dirY = Random.Range (0, 500);
 		float dirZ = Random.Range (0, 500);
