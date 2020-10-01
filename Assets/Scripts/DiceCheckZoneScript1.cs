@@ -9,6 +9,7 @@ public class DiceCheckZoneScript1 : MonoBehaviour
 
 	Vector3 diceVelocity;
 	Vector3 diceVelocity2;
+	Vector3 diceVelocity3;
 	//public List<Vector3> dicelist;
 
 	//void Start()
@@ -23,6 +24,7 @@ public class DiceCheckZoneScript1 : MonoBehaviour
 	{
 		diceVelocity = DiceScript1.diceVelocity;
 		diceVelocity2 = DiceScript1.diceVelocity;
+		diceVelocity3 = DiceScript1.diceVelocity;
 	}
 
 	private void OnTriggerStayDice(Collider col, Vector3 vector, Action<int> fnSetNumber)
@@ -74,6 +76,12 @@ public class DiceCheckZoneScript1 : MonoBehaviour
 			{
 				OnTriggerStayDice(col, diceVelocity2, (value) => DiceNumberTextScript1.diceNumber2 = value);
 			}
+
+			if (diceName== "dice3")
+			{
+				OnTriggerStayDice(col, diceVelocity3, (value) => DiceNumberTextScript1.diceNumber3 = value);
+			}
+
 		}
 	}
 

@@ -202,6 +202,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2043449996}
+        m_MethodName: Start
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2303044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1379,7 +1390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 3d9b86a637af0d244bb78c70e94dd0dc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3d9b86a637af0d244bb78c70e94dd0dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1514,7 +1525,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1618789622}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c835ca1e3d95dfa4b8b260acd383522d, type: 3}
+  m_Script: {fileID: 11500000, guid: e6f01696929a2644ea4c6ff992e07e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1618789625
@@ -1649,7 +1660,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2043449995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f7f500be86fce74abddc525018fb776, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b4b44fd7bad7684a93b5a502b916255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &2043449997
