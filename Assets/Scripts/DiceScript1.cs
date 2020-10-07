@@ -1,14 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class DiceScript1 : MonoBehaviour {
-
+public class DiceScript1 : MonoBehaviour{
 	static Rigidbody rb;
 	public static Vector3 diceVelocity;
-
-
-
 
 
 	// Use this for initialization
@@ -33,4 +30,9 @@ public class DiceScript1 : MonoBehaviour {
 		rb.AddTorque (dirX, dirY, dirZ);
 		
 	}
+
+
+	
+
+
 }

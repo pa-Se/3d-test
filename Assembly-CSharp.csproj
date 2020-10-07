@@ -57,6 +57,8 @@
      <Compile Include="Assets\Scripts\DiceCheckZoneScript1.cs" />
      <Compile Include="Assets\Scripts\DiceNumberTextScript1.cs" />
      <Compile Include="Assets\Scripts\DiceScript1.cs" />
+     <Compile Include="Assets\Scripts\test.cs" />
+     <Compile Include="Assets\Scripts\TransformTest.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Paul/Documents/3d test/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

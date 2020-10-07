@@ -70,6 +70,7 @@ public class DiceCheckZoneScript1 : MonoBehaviour
 
 	void OnTriggerStay(Collider col)
 	{
+		
 		if (col.transform.parent != null)
 		{
 			var  diceName= col.transform.parent.gameObject.name;
