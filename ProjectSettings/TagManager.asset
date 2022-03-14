@@ -7,6 +7,7 @@ TagManager:
   - diceone
   - dice6zone
   - dicefive
+  - NameOnCanvas
   layers:
   - Default
   - TransparentFX

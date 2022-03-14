@@ -21,10 +21,14 @@ public class DiceNumberTextScript1 : MonoBehaviour
 
 
     public ButtonScript buttonScript;
+    public MainMenuEnterName mainMenuEnterName;
 
     Text text;
+    string playerName;
     Text player1Points;
     Text player1Wuerfelversuche;
+
+    Text highScore;
     Text roundView;
     public static int diceNumber1;
     public static int diceNumber2;
@@ -41,6 +45,8 @@ public class DiceNumberTextScript1 : MonoBehaviour
     public int aktuelleRunde;
     public bool gameIsOver;
 
+    int highScoreNumber;
+
     int rundenPunktzahl;
 
 
@@ -55,6 +61,8 @@ public class DiceNumberTextScript1 : MonoBehaviour
         player1Points = GameObject.Find("player1").GetComponent<Text>();
         roundView = GameObject.Find("roundOverview").GetComponent<Text>();
         player1Wuerfelversuche = GameObject.Find("NumberOfRolls").GetComponent<Text>();
+        highScore = GameObject.Find("HighScore").GetComponent<Text>();
+        mainMenuEnterName = GameObject.Find("Canvas").GetComponent<MainMenuEnterName>();
 
         trigger1 = GameObject.Find("FDiceZone1").GetComponent<FDCheckZone1>();
         trigger2 = GameObject.Find("FDiceZone2").GetComponent<FDCheckZone2>();
@@ -62,17 +70,29 @@ public class DiceNumberTextScript1 : MonoBehaviour
         dice1 = GameObject.Find("dice").GetComponent<DiceScript1>();
         player1PointCalculation = new int[5];
         rundenPunktzahl = 0;
+        playerName = mainMenuEnterName.GetName();
+        player1Points.text = playerName + " ";
+        mainMenuEnterName.gameObject.SetActive(false);
 
 
     }
 
 
 
-    public void calculatePoints()
+    public async void calculatePoints(int newHighScore)
     {
+        if (newHighScore > highScoreNumber)
+        {
+            highScoreNumber = newHighScore;
+            highScore.text = "Highscore: " + highScoreNumber;
+        }
 
 
 
+        for (int i = 0; i < 3; i++)
+        {
+            player1PointCalculation[i] = 0;
+        }
 
         buttonScript.aktuelleRunde = 0;
 
@@ -104,8 +124,9 @@ public class DiceNumberTextScript1 : MonoBehaviour
         if (buttonScript.aktuelleRunde == 3)
         {
             gameIsOver = true;
-            calculatePoints();
-            player1Points.text = "Paul";
+            int newHighScore = player1PointCalculation[0] + player1PointCalculation[1] + player1PointCalculation[2];
+            calculatePoints(newHighScore);
+            player1Points.text = playerName;
             roundView.text = "Runde 1";
         }
 
@@ -125,7 +146,7 @@ public class DiceNumberTextScript1 : MonoBehaviour
         {
 
             getDiceValuesEachRound();
-            player1Points.text = "Paul " + player1PointCalculation[0];
+            player1Points.text = playerName + player1PointCalculation[0];
 
         }
 
@@ -133,7 +154,7 @@ public class DiceNumberTextScript1 : MonoBehaviour
         {
 
             getDiceValuesEachRound();
-            player1Points.text = "Paul " + player1PointCalculation[0] + " " + player1PointCalculation[1];
+            player1Points.text = playerName + player1PointCalculation[0] + " " + player1PointCalculation[1];
 
 
         }
@@ -142,7 +163,7 @@ public class DiceNumberTextScript1 : MonoBehaviour
         {
 
             getDiceValuesEachRound();
-            player1Points.text = "Paul " + player1PointCalculation[0] + " " + player1PointCalculation[1] + " " + player1PointCalculation[2];
+            player1Points.text = playerName + player1PointCalculation[0] + " " + player1PointCalculation[1] + " " + player1PointCalculation[2];
 
         }
 

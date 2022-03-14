@@ -13,11 +13,12 @@ public class Control : MonoBehaviour
 
         if (sceneName == "Menue")
         {
-            SceneManager.LoadScene("GameInitialize");
-        }
-        else if (sceneName == "GameInitialize")
-        {
             SceneManager.LoadScene("GameScene");
+        }
+
+        if (sceneName == "GameScene")
+        {
+            SceneManager.LoadScene("PauseGame");
         }
 
 
