@@ -14,7 +14,7 @@ public class ButtonScript : MonoBehaviour
     public int aktuelleRunde;
 
 
-    DiceNumberTextScript1 numberCalculation;
+
     DiceScript1 dice1;
     DiceScript2 dice2;
     DiceScript3 dice3;
@@ -30,7 +30,6 @@ public class ButtonScript : MonoBehaviour
         dice4 = GameObject.Find("dice4").GetComponent<DiceScript4>(); dice4.dice_unbind();
         dice5 = GameObject.Find("dice5").GetComponent<DiceScript5>(); dice5.dice_unbind();
 
-        numberCalculation = GameObject.Find("Text").GetComponent<DiceNumberTextScript1>();
 
         this.wuerfelversuche = 2;
         this.aktuelleRunde = 0;
@@ -40,9 +39,9 @@ public class ButtonScript : MonoBehaviour
 
     void Awake()
     {
-        button_shuffle = GameObject.Find("button_shuffle").GetComponent<UnityEngine.UI.Button>();
+
         button_shuffle.onClick.AddListener(Button_onClick);
-        button_reset = GameObject.Find("button_reset").GetComponent<UnityEngine.UI.Button>();
+
         button_reset.gameObject.transform.localScale = new Vector3(0, 0, 0);
         button_reset.onClick.AddListener(Reset);
 
@@ -73,7 +72,7 @@ public class ButtonScript : MonoBehaviour
         dice4.Start();
         dice5.Start();
         this.aktuelleRunde += 1;
-        numberCalculation.pointCalculation(this.aktuelleRunde);
+
 
 
 

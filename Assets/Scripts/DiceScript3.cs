@@ -36,12 +36,12 @@ public class DiceScript3 : MonoBehaviour
         DiceNumberTextScript1.diceNumber3 = 0;
         DiceNumberTextScript1.diceNumber4 = 0;
         DiceNumberTextScript1.diceNumber5 = 0;
-        float dirX = Random.Range(0, 100);
-        float dirY = Random.Range(0, 100);
-        float dirZ = Random.Range(0, 100);
+        float dirX = Random.Range(0, 150);
+        float dirY = Random.Range(0, 150);
+        float dirZ = Random.Range(0, 150);
         transform.position = new Vector3(Random.Range(-9.5f, -8.5f), Random.Range(0.4f, 0.1f), Random.Range(3f, 2.5f));
         transform.rotation = Quaternion.identity;
-        rb.AddForce(transform.up * 300);
+        rb.AddForce(transform.up * 350);
         rb.AddTorque(dirX, dirY, dirZ);
 
     }
@@ -114,12 +114,12 @@ public class DiceScript3 : MonoBehaviour
 
         this.binded = false;
         rb = GetComponent<Rigidbody>();
-        float dirX = Random.Range(0, 100);
-        float dirY = Random.Range(0, 100);
-        float dirZ = Random.Range(0, 100);
+        float dirX = Random.Range(0, 150);
+        float dirY = Random.Range(0, 150);
+        float dirZ = Random.Range(0, 150);
         transform.position = new Vector3(Random.Range(-9.5f, -8.5f), Random.Range(0.4f, 0.1f), Random.Range(3f, 2.5f));
         transform.rotation = Quaternion.identity;
-        rb.AddForce(transform.up * 300);
+        rb.AddForce(transform.up * 350);
         rb.AddTorque(dirX, dirY, dirZ);
 
     }
