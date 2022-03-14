@@ -25,7 +25,7 @@ public class test : MonoBehaviour
         {
             RaycastHit hitInfo;
             getTarget = ReturnClickedObject(out hitInfo);
-            if (getTarget.name != "Plane")
+            if (getTarget.name == "dice" || getTarget.name == "dice2" || getTarget.name == "dice3" || getTarget.name == "dice4" || getTarget.name == "dice5")
             {
                 isMouseDragging = true;
                 //Converting world position to screen position.
